@@ -26,6 +26,6 @@ export class UserListComponent implements OnInit {
   }
 
   calculate = () => {
-    this.result = "aaa";
+    this.result = "aaa\nbbb";
   }
 }

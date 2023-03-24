@@ -30,7 +30,7 @@ public class StarnApplication {
 	}
 
 	@GetMapping("/users")
-	public List<User> sayHello(@RequestParam(value = "myName", defaultValue = "World") String name) {
+	public List<User> getUsers(@RequestParam(value = "myName", defaultValue = "World") String name) {
 		System.out.println(testInjectedByName2);
 		List<User> users = userService.getUsers();
 		List<User> result = users.stream().sorted(Comparator.comparing((User us1) -> us1.getAge())).filter((User u) -> u.getAge() <50).collect(Collectors.toList());
